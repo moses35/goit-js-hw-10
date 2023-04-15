@@ -39,10 +39,10 @@ function renderListOfCountries(countries) {
       const markup = createListMarkup(countries);
       countryList.innerHTML = markup;
     } else {
-      const markup = createListMarkup(countries);
-      const countrieMarkup = countriesInfoMarkup(countries);
-      countryList.innerHTML = markup;
-      countryInfo.innerHTML = countrieMarkup;
+      const listMarkup = createListMarkup(countries);
+      const countryMarkup = countriesInfoMarkup(countries);
+      countryList.innerHTML = listMarkup;
+      countryInfo.innerHTML = countryMarkup;
     }
   }
 }
