@@ -17,10 +17,9 @@ inputField.addEventListener('input', debounce(onInputChange, DEBOUNCE_DELAY));
 
 //input change
 function onInputChange() {
-  if (inputField.value.trim() !== '') {
-    fetchCountries(inputField.value)
-      .then(renderListOfCountries)
-      .catch(onFetchError);
+  let inputValue = inputField.value.trim();
+  if (inputValue !== '') {
+    fetchCountries(inputValue).then(renderListOfCountries).catch(onFetchError);
   } else {
     countryList.innerHTML = '';
     countryInfo.innerHTML = '';
